@@ -25,9 +25,11 @@ p_tamanho = input('Tamanho: ')
 p_pontos = input('Pontos: ')
 p_valor = input('Valor: ')
 p_config = input('Config: ')
+
 #p_datacadastro = input('Data Cadastro: ')
 #p_dataatualizacao = input('Data Atualização: ')
 # see: https://www.sqlitetutorial.net/sqlite-date-functions/sqlite-date-function/
+
 sqlExecute("""
 INSERT INTO residuo (idtiporesiduo, residuo, descricao, label, tamanho, pontos, valor, config, datacadastro, dataatualizacao)
 VALUES (?,?,?,?,?,?,?,?,DATE('now'),DATETIME('now','localtime'))
